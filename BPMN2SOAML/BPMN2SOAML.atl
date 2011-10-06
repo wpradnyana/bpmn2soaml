@@ -1,0 +1,24 @@
+-- @path SOAML=/BPMN2SOAML/OUT/SoaMLBase.ecore
+-- @path BPMN=/BPMN2SOAML/IN/BPMN20.ecore
+
+module BPMN2SOAML;
+create OUT : SOAML from IN : BPMN;
+
+rule Process2Activity {
+	from
+		s : BPMN!Process
+	to
+		t : SOAML!Activity (
+			name <- 'ciao'
+			)
+}
+
+rule Task2Action {
+	from
+		s : BPMN!Task
+	to
+		t : SOAML!Action (
+			name <- s.name
+			)
+}
+
