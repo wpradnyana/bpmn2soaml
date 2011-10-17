@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_f7OMwX9EEd2StNMWrsqzRQ" iD="_f7OMwH9EEd2StNMWrsqzRQ">
+  <pools xmi:type="bpmn:Pool" xmi:id="_f8uBkX9EEd2StNMWrsqzRQ" iD="_f8uBkH9EEd2StNMWrsqzRQ" name="Client">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_f8uBk39EEd2StNMWrsqzRQ" iD="_f8uBkn9EEd2StNMWrsqzRQ" incomingEdges="_u4VFQX9EEd2StNMWrsqzRQ" name="Formuler une plainte" activityType="Task">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ijBGMKBFEd24_u298r5y6w" source="jobDescription">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ijBGMaBFEd24_u298r5y6w" key="jobKey" value="3219,540,12"/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_A3DpwX9HEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_p-qAkX9EEd2StNMWrsqzRQ" iD="_p-qAkH9EEd2StNMWrsqzRQ" outgoingEdges="_u4VFQX9EEd2StNMWrsqzRQ" name="Situation problématique" activityType="EventStartEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_16fgcX9EEd2StNMWrsqzRQ" iD="_16fgcH9EEd2StNMWrsqzRQ" name="Recevoir l'appel et expliquer sa plainte" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_aj8lEX9PEd2fMLKlL8aEWQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_8Sx4MX9EEd2StNMWrsqzRQ" iD="_8Sx4MH9EEd2StNMWrsqzRQ" name="Recevoir l'information" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_bHdbcX9HEd2StNMWrsqzRQ"/>
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_jfMF8X9IEd2StNMWrsqzRQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_u4VFQX9EEd2StNMWrsqzRQ" iD="_u4VFQH9EEd2StNMWrsqzRQ" source="_p-qAkX9EEd2StNMWrsqzRQ" target="_f8uBk39EEd2StNMWrsqzRQ"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_KVBq8X9FEd2StNMWrsqzRQ" iD="_KVBq8H9FEd2StNMWrsqzRQ" name="Bureau des plaintes">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GBHoUIvTEd2x9vq6SGuzhg" source="documentation">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GBHoUYvTEd2x9vq6SGuzhg" key="text" value="Groupe documentation"/>
+    </eAnnotations>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_PxabIX9FEd2StNMWrsqzRQ" iD="_PxabIH9FEd2StNMWrsqzRQ" outgoingEdges="_Hjd3YX9HEd2StNMWrsqzRQ" name="Recevoir la plainte" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_A3DpwX9HEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_S5PHsX9FEd2StNMWrsqzRQ" iD="_S5PHsH9FEd2StNMWrsqzRQ66666666666666666666" outgoingEdges="_Iyl88X9HEd2StNMWrsqzRQ" incomingEdges="_Hjd3YX9HEd2StNMWrsqzRQ" name="Évaluation et triage" activityType="SubProcess">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hJTWkIvTEd2x9vq6SGuzhg" source="inputs">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hJTWkYvTEd2x9vq6SGuzhg" key="template" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hJTWkovTEd2x9vq6SGuzhg" key="tool" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hJTWk4vTEd2x9vq6SGuzhg" key="attachment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hJTWlIvTEd2x9vq6SGuzhg" key="methodology" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m4_RkI_WEd2gjqp-k7S_VQ" source="jobDescription">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_m5iEII_WEd2gjqp-k7S_VQ" key="jobKey" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oskNUJCtEd2Q8LaH4dJprw" source="effort">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_osn3sJCtEd2Q8LaH4dJprw" key="value" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_osn3sZCtEd2Q8LaH4dJprw" key="delay" value=""/>
+      </eAnnotations>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_S5PHs39FEd2StNMWrsqzRQ" iD="_S5PHsn9FEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ckPNYX9FEd2StNMWrsqzRQ" iD="_ckPNYH9FEd2StNMWrsqzRQ" outgoingEdges="_KcPbUX9HEd2StNMWrsqzRQ _L1WjUX9HEd2StNMWrsqzRQ" incomingEdges="_Iyl88X9HEd2StNMWrsqzRQ" name="Plainte retenue?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_jgvFcX9FEd2StNMWrsqzRQ" iD="_jgvFcH9FEd2StNMWrsqzRQ" outgoingEdges="_udv6sX9HEd2StNMWrsqzRQ _xW0ZkX9HEd2StNMWrsqzRQ" incomingEdges="_L1WjUX9HEd2StNMWrsqzRQ" name="Plainte urgente?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ow5-kX9FEd2StNMWrsqzRQ" iD="_ow5-kH9FEd2StNMWrsqzRQ" outgoingEdges="_ZMOd0X9HEd2StNMWrsqzRQ" incomingEdges="_KcPbUX9HEd2StNMWrsqzRQ" name="Fermer la plainte"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_zjILAX9FEd2StNMWrsqzRQ" iD="_zjILAH9FEd2StNMWrsqzRQ" outgoingEdges="_aq2X8X9HEd2StNMWrsqzRQ" incomingEdges="_ZMOd0X9HEd2StNMWrsqzRQ" name="Informer le client">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_bHdbcX9HEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_3qu5kX9FEd2StNMWrsqzRQ" iD="_3qu5kH9FEd2StNMWrsqzRQ" incomingEdges="_aq2X8X9HEd2StNMWrsqzRQ" name="Plainte fermée" activityType="EventEndEmpty"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_8bddoX9FEd2StNMWrsqzRQ" iD="_8bddoH9FEd2StNMWrsqzRQ" outgoingEdges="_1ZgL4X9HEd2StNMWrsqzRQ" incomingEdges="_udv6sX9HEd2StNMWrsqzRQ" name="Déterminer si réalisation d'A-Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9uJV8JbdEd2_naFwCKyFHA" source="effort">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9uMZQJbdEd2_naFwCKyFHA" key="value" value="3.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9uMZQZbdEd2_naFwCKyFHA" key="delay" value="10.0"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EusgMJbhEd2lHplnLrLNeg" source="jobDescription">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EutHQJbhEd2lHplnLrLNeg" key="jobKey" value="3219,540,12"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KGjgQJbiEd2lHplnLrLNeg" source="documentation">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KGkHUJbiEd2lHplnLrLNeg" key="text" value=""/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_Gs5RMX9GEd2StNMWrsqzRQ" iD="_Gs5RMH9GEd2StNMWrsqzRQ" outgoingEdges="_4fivwX9HEd2StNMWrsqzRQ _-c3CwX9HEd2StNMWrsqzRQ" incomingEdges="_1ZgL4X9HEd2StNMWrsqzRQ" name="Assurance qualité?" activityType="GatewayDataBasedExclusive">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_B4Z9oJbjEd2fXudW1wT87A" source="documentation">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_B4aksJbjEd2fXudW1wT87A" key="text" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_56bEUJbrEd2VpIwkRAMWPA" source="effort">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_56brYJbrEd2VpIwkRAMWPA" key="value" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_56brYZbrEd2VpIwkRAMWPA" key="delay" value=""/>
+      </eAnnotations>
+    </vertices>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_KZ018X9GEd2StNMWrsqzRQ" iD="_KZ018H9GEd2StNMWrsqzRQ" outgoingEdges="_7-m3oX9HEd2StNMWrsqzRQ" incomingEdges="_4fivwX9HEd2StNMWrsqzRQ" name="Assurance qualité">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5SNswIvSEd2x9vq6SGuzhg" source="inputs">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5STMUIvSEd2x9vq6SGuzhg" key="template" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5STMUYvSEd2x9vq6SGuzhg" key="tool" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5STMUovSEd2x9vq6SGuzhg" key="attachment" value="TestAttachment"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5STMU4vSEd2x9vq6SGuzhg" key="methodology" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7B2eYIvSEd2x9vq6SGuzhg" source="documentation">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7B3FcIvSEd2x9vq6SGuzhg" key="text" value="Assurance qualité documentation &#xD;&#xA;multiligne"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4lht8JbrEd2VpIwkRAMWPA" source="effort">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4liVAJbrEd2VpIwkRAMWPA" key="value" value="3.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4liVAZbrEd2VpIwkRAMWPA" key="delay" value="3.0"/>
+      </eAnnotations>
+      <vertices xmi:type="bpmn:Activity" xmi:id="_KZ01839GEd2StNMWrsqzRQ" iD="_KZ018n9GEd2StNMWrsqzRQ" name="Sous-Tâche">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KvTF0JbjEd2fXudW1wT87A" source="documentation">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KvTF0ZbjEd2fXudW1wT87A" key="text" value=""/>
+        </eAnnotations>
+      </vertices>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_VsFNUX9GEd2StNMWrsqzRQ" iD="_VsFNUH9GEd2StNMWrsqzRQ" outgoingEdges="_NBOrIX9IEd2StNMWrsqzRQ" incomingEdges="_-c3CwX9HEd2StNMWrsqzRQ _7-m3oX9HEd2StNMWrsqzRQ" name="Produire et transmettre l'accusé de réception">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_jfMF8X9IEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_gbxqMX9GEd2StNMWrsqzRQ" iD="_gbxqMH9GEd2StNMWrsqzRQ" outgoingEdges="_OJprwX9IEd2StNMWrsqzRQ" incomingEdges="_NBOrIX9IEd2StNMWrsqzRQ" name="Numériser les documents fournis par le plaignant"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oHgm0X9GEd2StNMWrsqzRQ" iD="_oHgm0H9GEd2StNMWrsqzRQ" incomingEdges="_xW0ZkX9HEd2StNMWrsqzRQ" name="Transmettre l'information">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-YnPQJbdEd2_naFwCKyFHA" source="effort">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Yn2UJbdEd2_naFwCKyFHA" key="value" value="45.0"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-Yn2UZbdEd2_naFwCKyFHA" key="delay" value="10.0"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JwCBMJbjEd2fXudW1wT87A" source="documentation">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JwCoQJbjEd2fXudW1wT87A" key="text" value=""/>
+      </eAnnotations>
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_EtBHUX9KEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_tqnDAX9GEd2StNMWrsqzRQ" iD="_tqnDAH9GEd2StNMWrsqzRQ" incomingEdges="_OJprwX9IEd2StNMWrsqzRQ" name="Transmettre la plainte (courriel) à la DT">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_INu1AX9KEd2StNMWrsqzRQ"/>
+    </vertices>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Hjd3YX9HEd2StNMWrsqzRQ" iD="_Hjd3YH9HEd2StNMWrsqzRQ" source="_PxabIX9FEd2StNMWrsqzRQ" target="_S5PHsX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Iyl88X9HEd2StNMWrsqzRQ" iD="_Iyl88H9HEd2StNMWrsqzRQ" source="_S5PHsX9FEd2StNMWrsqzRQ" target="_ckPNYX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KcPbUX9HEd2StNMWrsqzRQ" iD="_KcPbUH9HEd2StNMWrsqzRQ" name="Non" source="_ckPNYX9FEd2StNMWrsqzRQ" target="_ow5-kX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_L1WjUX9HEd2StNMWrsqzRQ" iD="_L1WjUH9HEd2StNMWrsqzRQ" name="Oui" source="_ckPNYX9FEd2StNMWrsqzRQ" target="_jgvFcX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZMOd0X9HEd2StNMWrsqzRQ" iD="_ZMOd0H9HEd2StNMWrsqzRQ" source="_ow5-kX9FEd2StNMWrsqzRQ" target="_zjILAX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_aq2X8X9HEd2StNMWrsqzRQ" iD="_aq2X8H9HEd2StNMWrsqzRQ" source="_zjILAX9FEd2StNMWrsqzRQ" target="_3qu5kX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_udv6sX9HEd2StNMWrsqzRQ" iD="_udv6sH9HEd2StNMWrsqzRQ" name="Non" source="_jgvFcX9FEd2StNMWrsqzRQ" target="_8bddoX9FEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xW0ZkX9HEd2StNMWrsqzRQ" iD="_xW0ZkH9HEd2StNMWrsqzRQ" source="_jgvFcX9FEd2StNMWrsqzRQ" target="_oHgm0X9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_1ZgL4X9HEd2StNMWrsqzRQ" iD="_1ZgL4H9HEd2StNMWrsqzRQ" source="_8bddoX9FEd2StNMWrsqzRQ" target="_Gs5RMX9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_4fivwX9HEd2StNMWrsqzRQ" iD="_4fivwH9HEd2StNMWrsqzRQ" name="Oui" source="_Gs5RMX9GEd2StNMWrsqzRQ" target="_KZ018X9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7-m3oX9HEd2StNMWrsqzRQ" iD="_7-m3oH9HEd2StNMWrsqzRQ" source="_KZ018X9GEd2StNMWrsqzRQ" target="_VsFNUX9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_-c3CwX9HEd2StNMWrsqzRQ" iD="_-c3CwH9HEd2StNMWrsqzRQ" name="Non" source="_Gs5RMX9GEd2StNMWrsqzRQ" target="_VsFNUX9GEd2StNMWrsqzRQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_te9eoJbqEd2VpIwkRAMWPA" source="documentation">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_te-swJbqEd2VpIwkRAMWPA" key="text" value="Documentation multiligne"/>
+      </eAnnotations>
+    </sequenceEdges>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_NBOrIX9IEd2StNMWrsqzRQ" iD="_NBOrIH9IEd2StNMWrsqzRQ" source="_VsFNUX9GEd2StNMWrsqzRQ" target="_gbxqMX9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_OJprwX9IEd2StNMWrsqzRQ" iD="_OJprwH9IEd2StNMWrsqzRQ" source="_gbxqMX9GEd2StNMWrsqzRQ" target="_tqnDAX9GEd2StNMWrsqzRQ"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_4S6MgX9IEd2StNMWrsqzRQ" iD="_4S6MgH9IEd2StNMWrsqzRQ" name="Direction territoriale">
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_QThF0X9JEd2StNMWrsqzRQ" iD="_QThF0H9JEd2StNMWrsqzRQ" name="Intervention d'urgence">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_QThF039JEd2StNMWrsqzRQ" iD="_QThF0n9JEd2StNMWrsqzRQ">
+        <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_EtBHUX9KEd2StNMWrsqzRQ"/>
+      </vertices>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_Zh5g8X9JEd2StNMWrsqzRQ" iD="_Zh5g8H9JEd2StNMWrsqzRQ" outgoingEdges="_J43hIX9KEd2StNMWrsqzRQ" name="Recevoir et prendre connaissance de la plainte">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_INu1AX9KEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_fF4t8X9JEd2StNMWrsqzRQ" iD="_fF4t8H9JEd2StNMWrsqzRQ" outgoingEdges="_KYKFMX9KEd2StNMWrsqzRQ" incomingEdges="_J43hIX9KEd2StNMWrsqzRQ" name="Assigner la plainte"/>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_iik3QX9JEd2StNMWrsqzRQ" iD="_iik3QH9JEd2StNMWrsqzRQ" outgoingEdges="_LGzT4X9KEd2StNMWrsqzRQ" incomingEdges="_KYKFMX9KEd2StNMWrsqzRQ" name="Analyser la plainte et planifier la stratégie d'intervention">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_iik3Q39JEd2StNMWrsqzRQ" iD="_iik3Qn9JEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_xwhBEX9JEd2StNMWrsqzRQ" iD="_xwhBEH9JEd2StNMWrsqzRQ" outgoingEdges="_O4WS4X9KEd2StNMWrsqzRQ _oMUmoX9MEd2StNMWrsqzRQ" incomingEdges="_LGzT4X9KEd2StNMWrsqzRQ" name="Contact nécessaire au plaignant?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_MtngsX9KEd2StNMWrsqzRQ" iD="_MtngsH9KEd2StNMWrsqzRQ" outgoingEdges="_H4qckX9NEd2StNMWrsqzRQ" incomingEdges="_O4WS4X9KEd2StNMWrsqzRQ" name="Contacter le plaignant">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_aj8lEX9PEd2fMLKlL8aEWQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_QFiewX9KEd2StNMWrsqzRQ" iD="_QFiewH9KEd2StNMWrsqzRQ" outgoingEdges="_uzXMEX9MEd2StNMWrsqzRQ _J9lhsX9NEd2StNMWrsqzRQ" incomingEdges="_oMUmoX9MEd2StNMWrsqzRQ _H4qckX9NEd2StNMWrsqzRQ" name="Visite du SG requise?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_r-nMgX9MEd2StNMWrsqzRQ" iD="_r-nMgH9MEd2StNMWrsqzRQ" outgoingEdges="_XDeZ4X9NEd2StNMWrsqzRQ" incomingEdges="_uzXMEX9MEd2StNMWrsqzRQ" name="Contacter le SG"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_0qk3EX9MEd2StNMWrsqzRQ" iD="_0qk3EH9MEd2StNMWrsqzRQ" outgoingEdges="_U-aK0X9NEd2StNMWrsqzRQ" incomingEdges="_J9lhsX9NEd2StNMWrsqzRQ" name="Préparer la visite du SG"/>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_39IM8X9MEd2StNMWrsqzRQ" iD="_39IM8H9MEd2StNMWrsqzRQ" outgoingEdges="_YDP00X9NEd2StNMWrsqzRQ" incomingEdges="_U-aK0X9NEd2StNMWrsqzRQ" name="Inspecter le SG">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_39IM839MEd2StNMWrsqzRQ" iD="_39IM8n9MEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_B8icYX9NEd2StNMWrsqzRQ" iD="_B8icYH9NEd2StNMWrsqzRQ" outgoingEdges="_pqYDkX9NEd2StNMWrsqzRQ _rx-pQX9NEd2StNMWrsqzRQ" incomingEdges="_XDeZ4X9NEd2StNMWrsqzRQ _YDP00X9NEd2StNMWrsqzRQ" name="Mesures correctrices requises?" activityType="GatewayDataBasedExclusive"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_aH3_AX9NEd2StNMWrsqzRQ" iD="_aH3_AH9NEd2StNMWrsqzRQ" outgoingEdges="_JHswoX9PEd2fMLKlL8aEWQ" incomingEdges="_pqYDkX9NEd2StNMWrsqzRQ" name="Fermer la plainte au système CAFE"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ew2VQX9NEd2StNMWrsqzRQ" iD="_ew2VQH9NEd2StNMWrsqzRQ" outgoingEdges="_Jhtv4YAPEd2MabsGREbgvg" incomingEdges="_rx-pQX9NEd2StNMWrsqzRQ" name="Utiliser le rapport d'inspection ou la convension de régularisation"/>
+    <vertices xmi:type="bpmn:SubProcess" xmi:id="_wWogMX9NEd2StNMWrsqzRQ" iD="_wWogMH9NEd2StNMWrsqzRQ" outgoingEdges="_KM_kwX9PEd2fMLKlL8aEWQ" incomingEdges="_Jhtv4YAPEd2MabsGREbgvg" name="Réaliser le suivi de l'inspection pour une plainte">
+      <vertices xmi:type="bpmn:Activity" xmi:id="_wWogM39NEd2StNMWrsqzRQ" iD="_wWogMn9NEd2StNMWrsqzRQ"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_BjtawX9PEd2fMLKlL8aEWQ" iD="_BjtawH9PEd2fMLKlL8aEWQ" incomingEdges="_JHswoX9PEd2fMLKlL8aEWQ _KM_kwX9PEd2fMLKlL8aEWQ" name="Plainte fermée" activityType="EventEndEmpty"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J43hIX9KEd2StNMWrsqzRQ" iD="_J43hIH9KEd2StNMWrsqzRQ" source="_Zh5g8X9JEd2StNMWrsqzRQ" target="_fF4t8X9JEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KYKFMX9KEd2StNMWrsqzRQ" iD="_KYKFMH9KEd2StNMWrsqzRQ" source="_fF4t8X9JEd2StNMWrsqzRQ" target="_iik3QX9JEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_LGzT4X9KEd2StNMWrsqzRQ" iD="_LGzT4H9KEd2StNMWrsqzRQ" source="_iik3QX9JEd2StNMWrsqzRQ" target="_xwhBEX9JEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_O4WS4X9KEd2StNMWrsqzRQ" iD="_O4WS4H9KEd2StNMWrsqzRQ" name="Oui" source="_xwhBEX9JEd2StNMWrsqzRQ" target="_MtngsX9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_oMUmoX9MEd2StNMWrsqzRQ" iD="_oMUmoH9MEd2StNMWrsqzRQ" name="Non" source="_xwhBEX9JEd2StNMWrsqzRQ" target="_QFiewX9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_uzXMEX9MEd2StNMWrsqzRQ" iD="_uzXMEH9MEd2StNMWrsqzRQ" name="Non" source="_QFiewX9KEd2StNMWrsqzRQ" target="_r-nMgX9MEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_H4qckX9NEd2StNMWrsqzRQ" iD="_H4qckH9NEd2StNMWrsqzRQ" source="_MtngsX9KEd2StNMWrsqzRQ" target="_QFiewX9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J9lhsX9NEd2StNMWrsqzRQ" iD="_J9lhsH9NEd2StNMWrsqzRQ" name="Oui" source="_QFiewX9KEd2StNMWrsqzRQ" target="_0qk3EX9MEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_U-aK0X9NEd2StNMWrsqzRQ" iD="_U-aK0H9NEd2StNMWrsqzRQ" source="_0qk3EX9MEd2StNMWrsqzRQ" target="_39IM8X9MEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_XDeZ4X9NEd2StNMWrsqzRQ" iD="_XDeZ4H9NEd2StNMWrsqzRQ" source="_r-nMgX9MEd2StNMWrsqzRQ" target="_B8icYX9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_YDP00X9NEd2StNMWrsqzRQ" iD="_YDP00H9NEd2StNMWrsqzRQ" source="_39IM8X9MEd2StNMWrsqzRQ" target="_B8icYX9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pqYDkX9NEd2StNMWrsqzRQ" iD="_pqYDkH9NEd2StNMWrsqzRQ" name="Non" source="_B8icYX9NEd2StNMWrsqzRQ" target="_aH3_AX9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_rx-pQX9NEd2StNMWrsqzRQ" iD="_rx-pQH9NEd2StNMWrsqzRQ" name="Oui" source="_B8icYX9NEd2StNMWrsqzRQ" target="_ew2VQX9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JHswoX9PEd2fMLKlL8aEWQ" iD="_JHswoH9PEd2fMLKlL8aEWQ" source="_aH3_AX9NEd2StNMWrsqzRQ" target="_BjtawX9PEd2fMLKlL8aEWQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KM_kwX9PEd2fMLKlL8aEWQ" iD="_KM_kwH9PEd2fMLKlL8aEWQ" source="_wWogMX9NEd2StNMWrsqzRQ" target="_BjtawX9PEd2fMLKlL8aEWQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Jhtv4YAPEd2MabsGREbgvg" iD="_Jhtv4IAPEd2MabsGREbgvg" source="_ew2VQX9NEd2StNMWrsqzRQ" target="_wWogMX9NEd2StNMWrsqzRQ"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_A3DpwX9HEd2StNMWrsqzRQ" iD="_A3DpwH9HEd2StNMWrsqzRQ" source="_f8uBk39EEd2StNMWrsqzRQ" target="_PxabIX9FEd2StNMWrsqzRQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_bHdbcX9HEd2StNMWrsqzRQ" iD="_bHdbcH9HEd2StNMWrsqzRQ" source="_zjILAX9FEd2StNMWrsqzRQ" target="_8Sx4MX9EEd2StNMWrsqzRQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_jfMF8X9IEd2StNMWrsqzRQ" iD="_jfMF8H9IEd2StNMWrsqzRQ" source="_VsFNUX9GEd2StNMWrsqzRQ" target="_8Sx4MX9EEd2StNMWrsqzRQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_EtBHUX9KEd2StNMWrsqzRQ" iD="_EtBHUH9KEd2StNMWrsqzRQ" source="_oHgm0X9GEd2StNMWrsqzRQ" target="_QThF039JEd2StNMWrsqzRQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_INu1AX9KEd2StNMWrsqzRQ" iD="_INu1AH9KEd2StNMWrsqzRQ" source="_tqnDAX9GEd2StNMWrsqzRQ" target="_Zh5g8X9JEd2StNMWrsqzRQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_aj8lEX9PEd2fMLKlL8aEWQ" iD="_aj8lEH9PEd2fMLKlL8aEWQ" source="_MtngsX9KEd2StNMWrsqzRQ" target="_16fgcX9EEd2StNMWrsqzRQ"/>
+</bpmn:BpmnDiagram>
