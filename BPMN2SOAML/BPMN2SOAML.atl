@@ -1,0 +1,20 @@
+-- @path SOAML=/BPMN2SOAML/OUT/SoaMLBase.ecore
+-- @nsURI BPMN=http://stp.eclipse.org/bpmn
+
+module BPMN2SOAML;
+create OUT : SOAML from IN : BPMN;
+
+rule prova {
+	from
+	s: BPMN!Pool
+	to
+	t: SOAML!Participant ()
+}
+
+rule prova2 {
+	from
+	s: BPMN!Activity
+	to
+	t: SOAML!Activity
+	(name <- s.name)
+}
