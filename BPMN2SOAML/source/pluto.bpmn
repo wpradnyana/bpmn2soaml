@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmi:id="_H5uj4vTVEeCz-b4Eti_tzQ" iD="_H5uj4fTVEeCz-b4Eti_tzQ">
   <pools xmi:type="bpmn:Pool" xmi:id="_H9ELwPTVEeCz-b4Eti_tzQ" iD="_H9DksPTVEeCz-b4Eti_tzQ" name="Topolino">
-    <vertices xmi:type="bpmn:Activity" xmi:id="_H-YaYfTVEeCz-b4Eti_tzQ" iD="_H-YaYPTVEeCz-b4Eti_tzQ" name="Task" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_3AozIQYoEeG9KpJcqMxDyQ"/>
+    </vertices>
+    <lanes xmi:type="bpmn:Lane" xmi:id="_mtKzYQYiEeG9KpJcqMxDyQ" iD="_mtKzYAYiEeG9KpJcqMxDyQ" name="lane"/>
+    <lanes xmi:type="bpmn:Lane" xmi:id="_nromwQYiEeG9KpJcqMxDyQ" iD="_nromwAYiEeG9KpJcqMxDyQ" name="lane0"/>
   </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_zZ5V8QYoEeG9KpJcqMxDyQ" iD="_zZ5V8AYoEeG9KpJcqMxDyQ" name="Pool">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_0Pv_4QYoEeG9KpJcqMxDyQ" iD="_0Pv_4AYoEeG9KpJcqMxDyQ">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_3AozIQYoEeG9KpJcqMxDyQ"/>
+    </vertices>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_3AozIQYoEeG9KpJcqMxDyQ" iD="_3AozIAYoEeG9KpJcqMxDyQ" source="_ozL18QYoEeG9KpJcqMxDyQ" target="_0Pv_4QYoEeG9KpJcqMxDyQ"/>
 </bpmn:BpmnDiagram>

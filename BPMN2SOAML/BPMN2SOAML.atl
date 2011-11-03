@@ -5,12 +5,43 @@ module BPMN2SOAML;
 create OUT : SOAML from IN : BPMN;
 
 
-rule prova {
+rule pool2participant {
 	from
 	s: BPMN!Pool
 	to
 	t: SOAML!Class (name <- s.name),
 	p: SOAML!Participant (baseClass <- t)
+	
+}
+
+
+rule activity2requestport
+{
+	from
+	x: BPMN!Activity (x.outgoingMessages.size() > 0)
+	to
+	y: SOAML!Port,
+	z: SOAML!Request (basePort <- y)
+}
+
+
+rule activity2serviceport
+{
+	from
+	x: BPMN!Activity (x.incomingMessages.size() > 0)
+	to
+	y: SOAML!Port,
+	z: SOAML!Service (basePort <- y)
+}
+
+
+rule messageflow2servicecontract
+{
+	from 
+	x: BPMN!MessagingEdge (x.source.name )
+	to
+	z: SOAML!Collaboration,
+	y: SOAML!ServiceContract (baseCollaboration <- z)
 }
 
 
