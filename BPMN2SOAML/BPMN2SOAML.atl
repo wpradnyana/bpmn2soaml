@@ -15,9 +15,3 @@ rule prova {
 
 
 
-rule prova2 {
-	from
-	s: BPMN!Activity
-	to
-	t: SOAML!Activity
-}
