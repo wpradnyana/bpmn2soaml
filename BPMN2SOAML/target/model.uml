@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SoaML="http:///schemas/SoaML/_luM2QEefEeCaq-FchVOy8w/15" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/SoaML/_luM2QEefEeCaq-FchVOy8w/15 platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_luWnQEefEeCaq-FchVOy8w">
+  <uml:Model xmi:id="_LW4v0QYDEeGUiu8cF0JmZA" name="model">
+    <ownedRule xmi:type="uml:IntervalConstraint" xmi:id="_NJL8cAYaEeGUiu8cF0JmZA" name="IntervalConstraint0"/>
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_OkIH4AYDEeGUiu8cF0JmZA" name="ProvaServices">
+      <ownedAttribute xmi:id="_E9wzIAYaEeGUiu8cF0JmZA" name="Property0" type="_imfC8AYDEeGUiu8cF0JmZA"/>
+      <ownedAttribute xmi:id="_GuM2AAYaEeGUiu8cF0JmZA" name="Property1" type="_FrPkMAYaEeGUiu8cF0JmZA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_imfC8AYDEeGUiu8cF0JmZA" name="participrova" clientDependency="_SshCIAYaEeGUiu8cF0JmZA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FrPkMAYaEeGUiu8cF0JmZA" name="Participant0" clientDependency="_Mjw7MAYaEeGUiu8cF0JmZA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_Mjw7MAYaEeGUiu8cF0JmZA" name="InterfaceRealization0" supplier="_imfC8AYDEeGUiu8cF0JmZA" client="_FrPkMAYaEeGUiu8cF0JmZA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_SshCIAYaEeGUiu8cF0JmZA" name="InterfaceRealization1" supplier="_FrPkMAYaEeGUiu8cF0JmZA" client="_imfC8AYDEeGUiu8cF0JmZA"/>
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_WVMZAAYaEeGUiu8cF0JmZA" name="ServicesArchitecture0"/>
+    <profileApplication xmi:id="_LZk3cAYDEeGUiu8cF0JmZA">
+      <eAnnotations xmi:id="_LZmsoAYDEeGUiu8cF0JmZA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_luWnQEefEeCaq-FchVOy8w"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_qNXFAeONEd-II5_3g9y7GQ"/>
+    </profileApplication>
+  </uml:Model>
+  <SoaML:ServicesArchitecture xmi:id="_O_SZ4AYDEeGUiu8cF0JmZA" base_Collaboration="_OkIH4AYDEeGUiu8cF0JmZA"/>
+  <SoaML:Participant xmi:id="_inZo8AYDEeGUiu8cF0JmZA" base_Class="_imfC8AYDEeGUiu8cF0JmZA"/>
+  <SoaML:Participant xmi:id="_FrUcsAYaEeGUiu8cF0JmZA" base_Class="_FrPkMAYaEeGUiu8cF0JmZA"/>
+  <SoaML:ServicesArchitecture xmi:id="_WVRRgAYaEeGUiu8cF0JmZA" base_Collaboration="_WVMZAAYaEeGUiu8cF0JmZA"/>
+</xmi:XMI>

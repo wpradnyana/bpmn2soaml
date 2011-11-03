@@ -9,8 +9,11 @@ rule prova {
 	from
 	s: BPMN!Pool
 	to
-	t: SOAML!Participant
+	t: SOAML!Class (name <- s.name),
+	p: SOAML!Participant (baseClass <- t)
 }
+
+
 
 rule prova2 {
 	from
