@@ -15,7 +15,7 @@
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_bHdbcX9HEd2StNMWrsqzRQ"/>
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_jfMF8X9IEd2StNMWrsqzRQ"/>
     </vertices>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_u4VFQX9EEd2StNMWrsqzRQ" iD="_u4VFQH9EEd2StNMWrsqzRQ" source="_p-qAkX9EEd2StNMWrsqzRQ" target="_f8uBk39EEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_u4VFQX9EEd2StNMWrsqzRQ" iD="_u4VFQH9EEd2StNMWrsqzRQ"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_KVBq8X9FEd2StNMWrsqzRQ" iD="_KVBq8H9FEd2StNMWrsqzRQ" name="Bureau des plaintes">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GBHoUIvTEd2x9vq6SGuzhg" source="documentation">
@@ -105,24 +105,24 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_tqnDAX9GEd2StNMWrsqzRQ" iD="_tqnDAH9GEd2StNMWrsqzRQ" incomingEdges="_OJprwX9IEd2StNMWrsqzRQ" name="Transmettre la plainte (courriel) à la DT">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_INu1AX9KEd2StNMWrsqzRQ"/>
     </vertices>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Hjd3YX9HEd2StNMWrsqzRQ" iD="_Hjd3YH9HEd2StNMWrsqzRQ" source="_PxabIX9FEd2StNMWrsqzRQ" target="_S5PHsX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Iyl88X9HEd2StNMWrsqzRQ" iD="_Iyl88H9HEd2StNMWrsqzRQ" source="_S5PHsX9FEd2StNMWrsqzRQ" target="_ckPNYX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KcPbUX9HEd2StNMWrsqzRQ" iD="_KcPbUH9HEd2StNMWrsqzRQ" name="Non" source="_ckPNYX9FEd2StNMWrsqzRQ" target="_ow5-kX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_L1WjUX9HEd2StNMWrsqzRQ" iD="_L1WjUH9HEd2StNMWrsqzRQ" name="Oui" source="_ckPNYX9FEd2StNMWrsqzRQ" target="_jgvFcX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZMOd0X9HEd2StNMWrsqzRQ" iD="_ZMOd0H9HEd2StNMWrsqzRQ" source="_ow5-kX9FEd2StNMWrsqzRQ" target="_zjILAX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_aq2X8X9HEd2StNMWrsqzRQ" iD="_aq2X8H9HEd2StNMWrsqzRQ" source="_zjILAX9FEd2StNMWrsqzRQ" target="_3qu5kX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_udv6sX9HEd2StNMWrsqzRQ" iD="_udv6sH9HEd2StNMWrsqzRQ" name="Non" source="_jgvFcX9FEd2StNMWrsqzRQ" target="_8bddoX9FEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xW0ZkX9HEd2StNMWrsqzRQ" iD="_xW0ZkH9HEd2StNMWrsqzRQ" source="_jgvFcX9FEd2StNMWrsqzRQ" target="_oHgm0X9GEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_1ZgL4X9HEd2StNMWrsqzRQ" iD="_1ZgL4H9HEd2StNMWrsqzRQ" source="_8bddoX9FEd2StNMWrsqzRQ" target="_Gs5RMX9GEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_4fivwX9HEd2StNMWrsqzRQ" iD="_4fivwH9HEd2StNMWrsqzRQ" name="Oui" source="_Gs5RMX9GEd2StNMWrsqzRQ" target="_KZ018X9GEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7-m3oX9HEd2StNMWrsqzRQ" iD="_7-m3oH9HEd2StNMWrsqzRQ" source="_KZ018X9GEd2StNMWrsqzRQ" target="_VsFNUX9GEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_-c3CwX9HEd2StNMWrsqzRQ" iD="_-c3CwH9HEd2StNMWrsqzRQ" name="Non" source="_Gs5RMX9GEd2StNMWrsqzRQ" target="_VsFNUX9GEd2StNMWrsqzRQ">
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Hjd3YX9HEd2StNMWrsqzRQ" iD="_Hjd3YH9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Iyl88X9HEd2StNMWrsqzRQ" iD="_Iyl88H9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KcPbUX9HEd2StNMWrsqzRQ" iD="_KcPbUH9HEd2StNMWrsqzRQ" name="Non"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_L1WjUX9HEd2StNMWrsqzRQ" iD="_L1WjUH9HEd2StNMWrsqzRQ" name="Oui"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_ZMOd0X9HEd2StNMWrsqzRQ" iD="_ZMOd0H9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_aq2X8X9HEd2StNMWrsqzRQ" iD="_aq2X8H9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_udv6sX9HEd2StNMWrsqzRQ" iD="_udv6sH9HEd2StNMWrsqzRQ" name="Non"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_xW0ZkX9HEd2StNMWrsqzRQ" iD="_xW0ZkH9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_1ZgL4X9HEd2StNMWrsqzRQ" iD="_1ZgL4H9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_4fivwX9HEd2StNMWrsqzRQ" iD="_4fivwH9HEd2StNMWrsqzRQ" name="Oui"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7-m3oX9HEd2StNMWrsqzRQ" iD="_7-m3oH9HEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_-c3CwX9HEd2StNMWrsqzRQ" iD="_-c3CwH9HEd2StNMWrsqzRQ" name="Non" conditionType="Default" isDefault="true">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_te9eoJbqEd2VpIwkRAMWPA" source="documentation">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_te-swJbqEd2VpIwkRAMWPA" key="text" value="Documentation multiligne"/>
       </eAnnotations>
     </sequenceEdges>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_NBOrIX9IEd2StNMWrsqzRQ" iD="_NBOrIH9IEd2StNMWrsqzRQ" source="_VsFNUX9GEd2StNMWrsqzRQ" target="_gbxqMX9GEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_OJprwX9IEd2StNMWrsqzRQ" iD="_OJprwH9IEd2StNMWrsqzRQ" source="_gbxqMX9GEd2StNMWrsqzRQ" target="_tqnDAX9GEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_NBOrIX9IEd2StNMWrsqzRQ" iD="_NBOrIH9IEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_OJprwX9IEd2StNMWrsqzRQ" iD="_OJprwH9IEd2StNMWrsqzRQ"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_4S6MgX9IEd2StNMWrsqzRQ" iD="_4S6MgH9IEd2StNMWrsqzRQ" name="Direction territoriale">
     <vertices xmi:type="bpmn:SubProcess" xmi:id="_QThF0X9JEd2StNMWrsqzRQ" iD="_QThF0H9JEd2StNMWrsqzRQ" name="Intervention d'urgence">
@@ -154,22 +154,22 @@
       <vertices xmi:type="bpmn:Activity" xmi:id="_wWogM39NEd2StNMWrsqzRQ" iD="_wWogMn9NEd2StNMWrsqzRQ"/>
     </vertices>
     <vertices xmi:type="bpmn:Activity" xmi:id="_BjtawX9PEd2fMLKlL8aEWQ" iD="_BjtawH9PEd2fMLKlL8aEWQ" incomingEdges="_JHswoX9PEd2fMLKlL8aEWQ _KM_kwX9PEd2fMLKlL8aEWQ" name="Plainte fermée" activityType="EventEndEmpty"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J43hIX9KEd2StNMWrsqzRQ" iD="_J43hIH9KEd2StNMWrsqzRQ" source="_Zh5g8X9JEd2StNMWrsqzRQ" target="_fF4t8X9JEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KYKFMX9KEd2StNMWrsqzRQ" iD="_KYKFMH9KEd2StNMWrsqzRQ" source="_fF4t8X9JEd2StNMWrsqzRQ" target="_iik3QX9JEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_LGzT4X9KEd2StNMWrsqzRQ" iD="_LGzT4H9KEd2StNMWrsqzRQ" source="_iik3QX9JEd2StNMWrsqzRQ" target="_xwhBEX9JEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_O4WS4X9KEd2StNMWrsqzRQ" iD="_O4WS4H9KEd2StNMWrsqzRQ" name="Oui" source="_xwhBEX9JEd2StNMWrsqzRQ" target="_MtngsX9KEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_oMUmoX9MEd2StNMWrsqzRQ" iD="_oMUmoH9MEd2StNMWrsqzRQ" name="Non" source="_xwhBEX9JEd2StNMWrsqzRQ" target="_QFiewX9KEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_uzXMEX9MEd2StNMWrsqzRQ" iD="_uzXMEH9MEd2StNMWrsqzRQ" name="Non" source="_QFiewX9KEd2StNMWrsqzRQ" target="_r-nMgX9MEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_H4qckX9NEd2StNMWrsqzRQ" iD="_H4qckH9NEd2StNMWrsqzRQ" source="_MtngsX9KEd2StNMWrsqzRQ" target="_QFiewX9KEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J9lhsX9NEd2StNMWrsqzRQ" iD="_J9lhsH9NEd2StNMWrsqzRQ" name="Oui" source="_QFiewX9KEd2StNMWrsqzRQ" target="_0qk3EX9MEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_U-aK0X9NEd2StNMWrsqzRQ" iD="_U-aK0H9NEd2StNMWrsqzRQ" source="_0qk3EX9MEd2StNMWrsqzRQ" target="_39IM8X9MEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_XDeZ4X9NEd2StNMWrsqzRQ" iD="_XDeZ4H9NEd2StNMWrsqzRQ" source="_r-nMgX9MEd2StNMWrsqzRQ" target="_B8icYX9NEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_YDP00X9NEd2StNMWrsqzRQ" iD="_YDP00H9NEd2StNMWrsqzRQ" source="_39IM8X9MEd2StNMWrsqzRQ" target="_B8icYX9NEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pqYDkX9NEd2StNMWrsqzRQ" iD="_pqYDkH9NEd2StNMWrsqzRQ" name="Non" source="_B8icYX9NEd2StNMWrsqzRQ" target="_aH3_AX9NEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_rx-pQX9NEd2StNMWrsqzRQ" iD="_rx-pQH9NEd2StNMWrsqzRQ" name="Oui" source="_B8icYX9NEd2StNMWrsqzRQ" target="_ew2VQX9NEd2StNMWrsqzRQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JHswoX9PEd2fMLKlL8aEWQ" iD="_JHswoH9PEd2fMLKlL8aEWQ" source="_aH3_AX9NEd2StNMWrsqzRQ" target="_BjtawX9PEd2fMLKlL8aEWQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KM_kwX9PEd2fMLKlL8aEWQ" iD="_KM_kwH9PEd2fMLKlL8aEWQ" source="_wWogMX9NEd2StNMWrsqzRQ" target="_BjtawX9PEd2fMLKlL8aEWQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Jhtv4YAPEd2MabsGREbgvg" iD="_Jhtv4IAPEd2MabsGREbgvg" source="_ew2VQX9NEd2StNMWrsqzRQ" target="_wWogMX9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J43hIX9KEd2StNMWrsqzRQ" iD="_J43hIH9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KYKFMX9KEd2StNMWrsqzRQ" iD="_KYKFMH9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_LGzT4X9KEd2StNMWrsqzRQ" iD="_LGzT4H9KEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_O4WS4X9KEd2StNMWrsqzRQ" iD="_O4WS4H9KEd2StNMWrsqzRQ" name="Oui"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_oMUmoX9MEd2StNMWrsqzRQ" iD="_oMUmoH9MEd2StNMWrsqzRQ" name="Non"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_uzXMEX9MEd2StNMWrsqzRQ" iD="_uzXMEH9MEd2StNMWrsqzRQ" name="Non"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_H4qckX9NEd2StNMWrsqzRQ" iD="_H4qckH9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_J9lhsX9NEd2StNMWrsqzRQ" iD="_J9lhsH9NEd2StNMWrsqzRQ" name="Oui"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_U-aK0X9NEd2StNMWrsqzRQ" iD="_U-aK0H9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_XDeZ4X9NEd2StNMWrsqzRQ" iD="_XDeZ4H9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_YDP00X9NEd2StNMWrsqzRQ" iD="_YDP00H9NEd2StNMWrsqzRQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_pqYDkX9NEd2StNMWrsqzRQ" iD="_pqYDkH9NEd2StNMWrsqzRQ" name="Non"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_rx-pQX9NEd2StNMWrsqzRQ" iD="_rx-pQH9NEd2StNMWrsqzRQ" name="Oui"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_JHswoX9PEd2fMLKlL8aEWQ" iD="_JHswoH9PEd2fMLKlL8aEWQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_KM_kwX9PEd2fMLKlL8aEWQ" iD="_KM_kwH9PEd2fMLKlL8aEWQ"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Jhtv4YAPEd2MabsGREbgvg" iD="_Jhtv4IAPEd2MabsGREbgvg"/>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_A3DpwX9HEd2StNMWrsqzRQ" iD="_A3DpwH9HEd2StNMWrsqzRQ" source="_f8uBk39EEd2StNMWrsqzRQ" target="_PxabIX9FEd2StNMWrsqzRQ"/>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_bHdbcX9HEd2StNMWrsqzRQ" iD="_bHdbcH9HEd2StNMWrsqzRQ" source="_zjILAX9FEd2StNMWrsqzRQ" target="_8Sx4MX9EEd2StNMWrsqzRQ"/>

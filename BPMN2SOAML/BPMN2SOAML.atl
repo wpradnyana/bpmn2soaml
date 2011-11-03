@@ -4,11 +4,12 @@
 module BPMN2SOAML;
 create OUT : SOAML from IN : BPMN;
 
+
 rule prova {
 	from
 	s: BPMN!Pool
 	to
-	t: SOAML!Participant ()
+	t: SOAML!Participant
 }
 
 rule prova2 {
@@ -16,5 +17,4 @@ rule prova2 {
 	s: BPMN!Activity
 	to
 	t: SOAML!Activity
-	(name <- s.name)
 }
