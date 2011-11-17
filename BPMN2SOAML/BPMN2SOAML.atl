@@ -5,6 +5,16 @@ module BPMN2SOAML;
 create OUT : SOAML from IN : BPMN;
 
 
+rule service
+{
+	from
+	s: BPMN!BpmnDiagram
+	to
+	t: SOAML!Model (packagedElement <- s.pools)
+	
+--	p: SOAML!ServicesArchitecture
+}
+
 rule pool2participant {
 	from
 	s: BPMN!Pool
@@ -14,35 +24,11 @@ rule pool2participant {
 	
 }
 
-
-rule activity2requestport
+rule activity2collaborationuse
 {
 	from
-	x: BPMN!Activity (x.outgoingMessages.size() > 0)
+	x: BPMN!MessagingEdge
 	to
-	y: SOAML!Port,
-	z: SOAML!Request (basePort <- y)
+	y: SOAML!CollaborationUse
+--	z: SOAML!ServiceContract (baseCollaboration <- y)
 }
-
-
-rule activity2serviceport
-{
-	from
-	x: BPMN!Activity (x.incomingMessages.size() > 0)
-	to
-	y: SOAML!Port,
-	z: SOAML!Service (basePort <- y)
-}
-
-
-rule messageflow2servicecontract
-{
-	from 
-	x: BPMN!MessagingEdge (x.source.name )
-	to
-	z: SOAML!Collaboration,
-	y: SOAML!ServiceContract (baseCollaboration <- z)
-}
-
-
-
