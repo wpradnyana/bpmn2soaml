@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel" modelDirectory="/BPMN2SOAML/src"
+    modelPluginID="BPMN2SOAML" modelName="Soaml3" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.uml2.uml/model/UML.genmodel#//uml">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURES" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="PROCESS"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATIONS" value="PROCESS"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="PROCESS"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="PROCESS"/>
+    <details key="REDEFINING_OPERATIONS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="PROCESS"/>
+    <details key="CAMEL_CASE_NAMES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>soaml2.xmi</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="SoaMl" resource="XML" disposableProviderFactory="true"
+      ecorePackage="soaMl3.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//MessageType">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//MessageType/encoding"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//MessageType/baseClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//MessageType/baseDataType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//MessageType/baseSignal"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//ServiceInterface">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//ServiceInterface/baseInterface"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//ServiceInterface/baseClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Participant">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Participant/baseClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Port">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Port/connectorRequired"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Port/basePort"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Agent"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Service">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Service/basePort"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Request">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Request/basePort"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Property">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Property/baseProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Property/isId"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Attachment">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Attachment/encoding"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Attachment/baseProperty"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Attachment/mimetype"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//CollaborationUse">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//CollaborationUse/isStrict"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//CollaborationUse/baseCollaborationUse"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//MotivationRealization">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//MotivationRealization/baseRealization"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Milestone">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Milestone/progress"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Milestone/value"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Milestone/baseComment"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Milestone/signal"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//ServiceContract"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Collaboration">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute soaMl3.ecore#//Collaboration/isStrict"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Collaboration/baseCollaboration"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//ServicesArchitecture"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Capability">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Capability/baseClass"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Category"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//NodeDescriptor">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//NodeDescriptor/baseArtifact"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Catalog">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Catalog/basePackage"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Categorization">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Categorization/baseDependency"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//CategoryValue"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//FreeFormValue">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//FreeFormValue/baseValueSpecification"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//ServiceChannel">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//ServiceChannel/baseConnector"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Expose">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Expose/baseDependency"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//FreeFormDescriptor">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//FreeFormDescriptor/baseProperty"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="soaMl3.ecore#//MotivationElement"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Consumer">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Consumer/baseClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Consumer/baseInterface"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="soaMl3.ecore#//Provider">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Provider/baseClass"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference soaMl3.ecore#//Provider/baseInterface"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
