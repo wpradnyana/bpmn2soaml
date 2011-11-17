@@ -4,31 +4,50 @@
 module BPMN2SOAML;
 create OUT : SOAML from IN : BPMN;
 
+entrypoint rule Metamodel() {
+to t : SOAML!Model(
+packagedElement <- BPMN!BpmnDiagram.allInstances()->collect(a | thisModule.r0(a)),
+packagedElement <- BPMN!Pool.allInstances()->collect(a | thisModule.r1(a))
+)
+do {	thisModule.Model <- t;	}}
 
-rule service
-{
-	from
-	s: BPMN!BpmnDiagram
-	to
-	t: SOAML!Model (packagedElement <- s.pools)
-	
+unique lazy rule r0{
+	from X0 : BPMN!BpmnDiagram
+	to Y0 : SOAML!Collaboration (name <- X0.name)
+}
+
+unique lazy rule r1{
+from X1 : BPMN!Pool
+to Y1 : SOAML!Class (name <- X1.name),
+Z1: SOAML!Participant (baseClass <- Y1)
+}
+
+
+--
+--rule service
+--{
+--	from
+--	s: BPMN!BpmnDiagram
+--	to
+--	t: SOAML!Model (packagedElement <- s.pools)
+--	
 --	p: SOAML!ServicesArchitecture
-}
+--}
 
-rule pool2participant {
-	from
-	s: BPMN!Pool
-	to
-	t: SOAML!Class (name <- s.name),
-	p: SOAML!Participant (baseClass <- t)
-	
-}
-
-rule activity2collaborationuse
-{
-	from
-	x: BPMN!MessagingEdge
-	to
-	y: SOAML!CollaborationUse
+--rule pool2participant {
+--	from
+--	s: BPMN!Pool
+--	to
+--	t: SOAML!Class (name <- s.name),
+--	p: SOAML!Participant (baseClass <- t)
+--	
+--}
+--
+--rule activity2collaborationuse
+--{
+--	from
+--	x: BPMN!MessagingEdge
+--	to
+--	y: SOAML!CollaborationUse
 --	z: SOAML!ServiceContract (baseCollaboration <- y)
-}
+--}
