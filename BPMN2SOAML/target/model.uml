@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SoaML="http:///schemas/SoaML/_luM2QEefEeCaq-FchVOy8w/15" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/SoaML/_luM2QEefEeCaq-FchVOy8w/15 platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_luWnQEefEeCaq-FchVOy8w">
-  <uml:Model xmi:id="_kLWHoA65EeGnh8Hsffoyeg" name="model">
-    <packagedElement xmi:type="uml:Collaboration" xmi:id="_mwjPUA65EeGnh8Hsffoyeg" name="ServicesArchitecture0">
-      <collaborationUse xmi:id="_BH3AcBEOEeGWGrZmZCBNiQ" name="CollaborationUse1" visibility="public"/>
-      <collaborationUse xmi:id="_gUVGsBESEeGSJZQR8w2d2Q" name="CollaborationUse2"/>
-      <ownedAttribute xmi:id="_4nYuAA65EeGnh8Hsffoyeg" name="Property0" type="_4AZmgA65EeGnh8Hsffoyeg"/>
-      <ownedAttribute xmi:id="_5zk0UA65EeGnh8Hsffoyeg" name="Property1" type="_3eE8kA65EeGnh8Hsffoyeg"/>
-      <ownedAttribute xmi:id="_FNpKEBEOEeGWGrZmZCBNiQ" name="Property2" type="_3eE8kA65EeGnh8Hsffoyeg"/>
-      <ownedAttribute xmi:id="_HEGVYBEOEeGWGrZmZCBNiQ" name="Property3" type="_4AZmgA65EeGnh8Hsffoyeg"/>
+  <uml:Model xmi:id="_8Ut0ACmXEeGNQ6EHguUKCw" name="model">
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="__72SwCmXEeGNQ6EHguUKCw" name="ServicesArchitecture0">
+      <collaborationUse xmi:id="_HfCXYCmYEeGNQ6EHguUKCw" name="CollaborationUse1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_3eE8kA65EeGnh8Hsffoyeg" name="Participant0" clientDependency="_OefDUBEOEeGWGrZmZCBNiQ _C1xycBEcEeGSJZQR8w2d2Q _2OMKYBEcEeGSJZQR8w2d2Q"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_4AZmgA65EeGnh8Hsffoyeg" name="Participant1" clientDependency="_So1j4BEOEeGWGrZmZCBNiQ"/>
-    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_GD1FAA66EeGnh8Hsffoyeg" name="InformationFlow0" conveyed="_3eE8kA65EeGnh8Hsffoyeg" informationSource="_3eE8kA65EeGnh8Hsffoyeg" informationTarget="_4AZmgA65EeGnh8Hsffoyeg"/>
-    <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_OefDUBEOEeGWGrZmZCBNiQ" name="ComponentRealization0" supplier="_BH3AcBEOEeGWGrZmZCBNiQ" client="_3eE8kA65EeGnh8Hsffoyeg"/>
-    <packagedElement xmi:type="uml:ComponentRealization" xmi:id="_So1j4BEOEeGWGrZmZCBNiQ" name="ComponentRealization1" supplier="_BH3AcBEOEeGWGrZmZCBNiQ" client="_4AZmgA65EeGnh8Hsffoyeg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_C1xycBEcEeGSJZQR8w2d2Q" name="" supplier="_BH3AcBEOEeGWGrZmZCBNiQ" client="_3eE8kA65EeGnh8Hsffoyeg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_2OMKYBEcEeGSJZQR8w2d2Q" name="Usage0" supplier="_BH3AcBEOEeGWGrZmZCBNiQ" client="_3eE8kA65EeGnh8Hsffoyeg"/>
-    <profileApplication xmi:id="_kOmP8A65EeGnh8Hsffoyeg">
-      <eAnnotations xmi:id="_kOoFIA65EeGnh8Hsffoyeg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DhXn8CmYEeGNQ6EHguUKCw" name="Participant0" clientDependency="_Oj8kkCmYEeGNQ6EHguUKCw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_E_d9oCmYEeGNQ6EHguUKCw" name="Participant1" clientDependency="_Ps6XwCmYEeGNQ6EHguUKCw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Oj8kkCmYEeGNQ6EHguUKCw" name="Usage0" supplier="_HfCXYCmYEeGNQ6EHguUKCw" client="_DhXn8CmYEeGNQ6EHguUKCw"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Ps6XwCmYEeGNQ6EHguUKCw" name="Usage1" supplier="_HfCXYCmYEeGNQ6EHguUKCw" client="_E_d9oCmYEeGNQ6EHguUKCw"/>
+    <profileApplication xmi:id="_8VkvoCmXEeGNQ6EHguUKCw">
+      <eAnnotations xmi:id="_8V1OUCmXEeGNQ6EHguUKCw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_luWnQEefEeCaq-FchVOy8w"/>
       </eAnnotations>
       <appliedProfile href="platform:/plugin/org.eclipse.papyrus.soaml.diagram.common/profile/SoaML.profile.uml#_qNXFAeONEd-II5_3g9y7GQ"/>
     </profileApplication>
   </uml:Model>
-  <SoaML:ServicesArchitecture xmi:id="_nMGi4A65EeGnh8Hsffoyeg" base_Collaboration="_mwjPUA65EeGnh8Hsffoyeg"/>
-  <SoaML:Participant xmi:id="_3fgf8A65EeGnh8Hsffoyeg" base_Class="_3eE8kA65EeGnh8Hsffoyeg"/>
-  <SoaML:Participant xmi:id="_4AfGEA65EeGnh8Hsffoyeg" base_Class="_4AZmgA65EeGnh8Hsffoyeg"/>
-  <SoaML:CollaborationUse xmi:id="_BJuosBEOEeGWGrZmZCBNiQ" base_CollaborationUse="_BH3AcBEOEeGWGrZmZCBNiQ"/>
-  <SoaML:CollaborationUse xmi:id="_gUzAwBESEeGSJZQR8w2d2Q" base_CollaborationUse="_gUVGsBESEeGSJZQR8w2d2Q"/>
+  <SoaML:ServicesArchitecture xmi:id="_ABMs0CmYEeGNQ6EHguUKCw" base_Collaboration="__72SwCmXEeGNQ6EHguUKCw"/>
+  <SoaML:Participant xmi:id="_DheVoCmYEeGNQ6EHguUKCw" base_Class="_DhXn8CmYEeGNQ6EHguUKCw"/>
+  <SoaML:Participant xmi:id="_E_i2ICmYEeGNQ6EHguUKCw" base_Class="_E_d9oCmYEeGNQ6EHguUKCw"/>
+  <SoaML:CollaborationUse xmi:id="_HfJFECmYEeGNQ6EHguUKCw" base_CollaborationUse="_HfCXYCmYEeGNQ6EHguUKCw"/>
 </xmi:XMI>

@@ -1,33 +1,62 @@
 -- @path SOAML=/BPMN2SOAML/OUT/soaMl.ecore
 -- @nsURI BPMN=http://stp.eclipse.org/bpmn
 
+
 module BPMN2SOAML3;
-create OUT : SOAML from IN : BPMN;
+create OUT: SOAML from IN: BPMN;
 
 entrypoint rule Metamodel() {
-to t : SOAML!Model(
-packagedElement <- BPMN!BpmnDiagram.allInstances()->collect(a | thisModule.r0(a)),
-packagedElement <- BPMN!Pool.allInstances()->collect(a | thisModule.r1(a)),
-packagedElement <- BPMN!MessagingEdge.allInstances()->collect(a | thisModule.r2(a))
-)
-do {	thisModule.Model <- t;	}}
+	to
+		t: SOAML!Model (
+			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.
+					r0(a)),
+			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a)),
+			packagedElement <- BPMN!MessagingEdge.allInstances() -> collect(a |
+					thisModule.r2(a))
+		)
+	do {	thisModule.Model <- t;	}
+}
 
 unique lazy rule r0{
-	from X0 : BPMN!BpmnDiagram
-	to Y0 : SOAML!Collaboration (name <- X0.name),
-	Z0 : SOAML!ServicesArchitecture (baseCollaboration <- Y0)
+	from
+		X0: BPMN!BpmnDiagram
+	to
+		Y0: SOAML!Collaboration (
+			name <- X0.name
+		),
+		Z0: SOAML!ServicesArchitecture (
+			baseCollaboration <- Y0
+		)
 }
 
 unique lazy rule r1{
-from X1 : BPMN!Pool
-to Y1 : SOAML!Class (name <- X1.name),
-Z1: SOAML!Participant (baseClass <- Y1)
+from
+		X1: BPMN!Pool
+to
+		Y1: SOAML!Class (
+			name <- X1.name
+		),
+		Z1: SOAML!Participant (
+			baseClass <- Y1
+		)
 }
 
 unique lazy rule r2{
 	from
-		x : BPMN!MessagingEdge
-	to 
-		y : SOAML!CollaborationUse (name <- x.name),
-		z : SOAML!ServiceContract (collaborationUse <- y)
+		x: BPMN!MessagingEdge
+	to
+		y: SOAML!CollaborationUse (
+			name <- x.name
+		),
+		k: SOAML!Usage (
+			supplier <- y,
+			client <- x.source
+		),
+		j: SOAML!Usage (
+			supplier <- y,
+			client <- x.target
+		),
+		z: SOAML!ServiceContract (
+			collaborationUse <- y
+		)
 }
