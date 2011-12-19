@@ -8,16 +8,13 @@ create OUT: SOAML from IN: BPMN;
 entrypoint rule Metamodel() {
 	to
 		t: SOAML!Model (
-			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.
-					r0(a)),
-			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a)),
-			packagedElement <- BPMN!MessagingEdge.allInstances() -> collect(a |
-					thisModule.r2(a))
+			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.r0(a)),
+			packagedElement <- BPMN!MessagingEdge.allInstances() -> collect(a | thisModule.r2(a))
 		)
 	do {	thisModule.Model <- t;	}
 }
 
-unique lazy rule r0{
+lazy rule r0{
 	from
 		X0: BPMN!BpmnDiagram
 	to
@@ -29,34 +26,84 @@ unique lazy rule r0{
 		)
 }
 
-unique lazy rule r1{
-from
-		X1: BPMN!Pool
-to
-		Y1: SOAML!Class (
-			name <- X1.name
-		),
-		Z1: SOAML!Participant (
-			baseClass <- Y1
-		)
+rule r1 (X1: BPMN!MessagingEdge){
+
+	to
+		Y1 : SOAML!Class (name <- X1.source.name),
+		Y2 : SOAML!Class (name <- X1.target.name),
+		Z1 : SOAML!Participant (baseClass <- Y1),
+		Z2 : SOAML!Participant (baseClass <- Y2),
+		Q1 : SOAML!CollaborationUse (name <- X1.name),
+		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
+		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
+		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
+		do{
+			Sequence{Y1,Y2,T1,T2};
+		}
 }
 
-unique lazy rule r2{
-	from
-		x: BPMN!MessagingEdge
-	to
-		y: SOAML!CollaborationUse (
-			name <- x.name
-		),
-		k: SOAML!Usage (
-			supplier <- y,
-			client <- x.source
-		),
-		j: SOAML!Usage (
-			supplier <- y,
-			client <- x.target
-		),
-		z: SOAML!ServiceContract (
-			collaborationUse <- y
-		)
-}
+
+
+
+--module BPMN2SOAML3;
+--create OUT: SOAML from IN: BPMN;
+--
+--entrypoint rule Metamodel() {
+--	to
+--		t: SOAML!Model (
+--			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.
+--					r0(a)),
+--			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a)),
+--			packagedElement <- BPMN!MessagingEdge.allInstances() -> collect(a |
+--					thisModule.r2(a))
+--		)
+--	do {	thisModule.Model <- t;	}
+--}
+--
+--unique lazy rule r0{
+--	from
+--		X0: BPMN!BpmnDiagram
+--	to
+--		Y0: SOAML!Collaboration (
+--			name <- X0.name
+--		),
+--		Z0: SOAML!ServicesArchitecture (
+--			baseCollaboration <- Y0
+--		)
+--}
+--
+
+
+
+--rule r1 (X1: BPMN!Pool){
+--to
+--		Y1: SOAML!Class (
+--			name <- X1.name
+--		),
+--		Z1: SOAML!Participant (
+--			baseClass <- Y1
+--		)
+--		do {
+--			for (c in X1.outgoingMessages) {
+--				
+--			}
+--		}
+--}
+--
+--rule r2 (x : BPMN!MessagingEdge) {
+--	to
+--		y: SOAML!CollaborationUse (
+--			name <- x.name
+--		),
+--		k: SOAML!Usage (
+--			supplier <- y,
+--			client <- thisModule.r1()
+--		),
+--		j: SOAML!Usage (
+--			supplier <- y,
+--			client <- x.target
+--		),
+--		z: SOAML!ServiceContract (
+--			collaborationUse <- y
+--		)
+--}

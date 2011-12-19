@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmi:id="_H5uj4vTVEeCz-b4Eti_tzQ" iD="_H5uj4fTVEeCz-b4Eti_tzQ">
   <pools xmi:type="bpmn:Pool" xmi:id="_H9ELwPTVEeCz-b4Eti_tzQ" iD="_H9DksPTVEeCz-b4Eti_tzQ" name="Topolino">
-    <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ" outgoingEdges="_Df7QsSpMEeGh3ZXg3iYmKw" lanes="_mtKzYQYiEeG9KpJcqMxDyQ _nromwQYiEeG9KpJcqMxDyQ">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_3AozIQYoEeG9KpJcqMxDyQ"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_CCzLYSpMEeGh3ZXg3iYmKw" iD="_CCzLYCpMEeGh3ZXg3iYmKw" incomingEdges="_Df7QsSpMEeGh3ZXg3iYmKw" lanes="_mtKzYQYiEeG9KpJcqMxDyQ"/>
-    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_Df7QsSpMEeGh3ZXg3iYmKw" iD="_Df7QsCpMEeGh3ZXg3iYmKw"/>
-    <lanes xmi:type="bpmn:Lane" xmi:id="_mtKzYQYiEeG9KpJcqMxDyQ" iD="_mtKzYAYiEeG9KpJcqMxDyQ" name="lane" activities="_ozL18QYoEeG9KpJcqMxDyQ _CCzLYSpMEeGh3ZXg3iYmKw"/>
-    <lanes xmi:type="bpmn:Lane" xmi:id="_nromwQYiEeG9KpJcqMxDyQ" iD="_nromwAYiEeG9KpJcqMxDyQ" name="lane0" activities="_ozL18QYoEeG9KpJcqMxDyQ"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_uamEoSpqEeGj1rpFrTYsMw" iD="_uamEoCpqEeGj1rpFrTYsMw">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_vgO3ASpqEeGj1rpFrTYsMw"/>
+    </vertices>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_zZ5V8QYoEeG9KpJcqMxDyQ" iD="_zZ5V8AYoEeG9KpJcqMxDyQ" name="Pool">
     <vertices xmi:type="bpmn:Activity" xmi:id="_0Pv_4QYoEeG9KpJcqMxDyQ" iD="_0Pv_4AYoEeG9KpJcqMxDyQ">
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_3AozIQYoEeG9KpJcqMxDyQ"/>
     </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_uw-kUSpqEeGj1rpFrTYsMw" iD="_uw-kUCpqEeGj1rpFrTYsMw">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_vgO3ASpqEeGj1rpFrTYsMw"/>
+    </vertices>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_3AozIQYoEeG9KpJcqMxDyQ" iD="_3AozIAYoEeG9KpJcqMxDyQ" source="_ozL18QYoEeG9KpJcqMxDyQ" target="_0Pv_4QYoEeG9KpJcqMxDyQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_vgO3ASpqEeGj1rpFrTYsMw" iD="_vgO3ACpqEeGj1rpFrTYsMw" source="_uamEoSpqEeGj1rpFrTYsMw" target="_uw-kUSpqEeGj1rpFrTYsMw"/>
 </bpmn:BpmnDiagram>
