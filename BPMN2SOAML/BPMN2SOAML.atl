@@ -1,15 +1,20 @@
--- @path SOAML=/BPMN2SOAML/OUT/soaMl.ecore
+-- @path SOAML=/BPMN2SOAML/BPMN2SOAML/OUT/soaMl.ecore
 -- @nsURI BPMN=http://stp.eclipse.org/bpmn
 
 
 module BPMN2SOAML3;
 create OUT: SOAML from IN: BPMN;
 
+--helper def: vertice: BPMN!Pool =
+--	let allVertex : Sequence(BPMN!Vertex) = BPMN!Vertex.allInstances().asSequence() in
+--	allVertex
+
+
 entrypoint rule Metamodel() {
 	to
 		t: SOAML!Model (
 			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.r0(a)),
-			packagedElement <- BPMN!MessagingEdge.allInstances() -> collect(a | thisModule.r2(a))
+			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r2(a))
 		)
 	do {	thisModule.Model <- t;	}
 }
@@ -26,21 +31,76 @@ lazy rule r0{
 		)
 }
 
-rule r1 (X1: BPMN!MessagingEdge){
+--rule r1 (X1: BPMN!MessagingEdge){
+--
+--	to
+--		Y1 : SOAML!Class (name <- X1.source.name),
+--		Y2 : SOAML!Class (name <- X1.target.name),
+--		Z1 : SOAML!Participant (baseClass <- Y1),
+--		Z2 : SOAML!Participant (baseClass <- Y2),
+--		Q1 : SOAML!CollaborationUse (name <- X1.name),
+--		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
+--		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
+--		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
+--		do{
+--			Sequence{Y1,Y2,T1,T2};
+--		}
+--}
 
+--rule r2 (X1: BPMN!Pool)
+--{
+--	to
+--	Y1: SOAML!Class (name <- X1.name),
+--	Z1: SOAML!Participant (baseClass <- Y1)
+--	do
+--	{
+--		Sequence{Y1};
+--	}
+--}
+
+
+
+lazy rule r2
+{
+	from
+	X1: BPMN!Pool
 	to
-		Y1 : SOAML!Class (name <- X1.source.name),
-		Y2 : SOAML!Class (name <- X1.target.name),
-		Z1 : SOAML!Participant (baseClass <- Y1),
-		Z2 : SOAML!Participant (baseClass <- Y2),
-		Q1 : SOAML!CollaborationUse (name <- X1.name),
-		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
-		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
-		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
-		do{
-			Sequence{Y1,Y2,T1,T2};
+	Y1: SOAML!Class (name <- X1.name),
+	Z1: SOAML!Participant (baseClass <- Y1)
+	do
+	{
+		if (X1.vertices.size() > 0)
+		{
+			thisModule.r3(X1,1);
 		}
+	}
 }
+
+
+rule r3(X1: BPMN!Pool,n: Integer)
+{
+	do
+	{
+		if (n < X1.vertices.size())
+		{
+			if (X1.vertices.at(n).outgoingMessages.size() > 0)
+			{
+				'ciao'.println();
+				thisModule.r4(X1.vertices.at(n));
+			}
+			thisModule.r3(X1, n+1);
+		}
+	}
+		
+}
+
+rule r4 (X1:BPMN!Vertex)
+{
+	to
+	Y1:SOAML!Usage
+}
+
+
 
 
 
