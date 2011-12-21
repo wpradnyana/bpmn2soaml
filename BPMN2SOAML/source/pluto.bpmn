@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmi:id="_H5uj4vTVEeCz-b4Eti_tzQ" iD="_H5uj4fTVEeCz-b4Eti_tzQ">
   <pools xmi:type="bpmn:Pool" xmi:id="_H9ELwPTVEeCz-b4Eti_tzQ" iD="_H9DksPTVEeCz-b4Eti_tzQ" name="Topolino">
-    <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ" name="prova">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ" name="task-topolino">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_MzoYYStXEeG_RKSDPbXcKg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_uamEoSpqEeGj1rpFrTYsMw" iD="_uamEoCpqEeGj1rpFrTYsMw"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oVvgwSvfEeGLPIIrQpoKNA" iD="_oVvgwCvfEeGLPIIrQpoKNA">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qJ8pUSvfEeGLPIIrQpoKNA"/>
+    </vertices>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_zZ5V8QYoEeG9KpJcqMxDyQ" iD="_zZ5V8AYoEeG9KpJcqMxDyQ" name="Pool">
-    <vertices xmi:type="bpmn:Activity" xmi:id="_0Pv_4QYoEeG9KpJcqMxDyQ" iD="_0Pv_4AYoEeG9KpJcqMxDyQ">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_0Pv_4QYoEeG9KpJcqMxDyQ" iD="_0Pv_4AYoEeG9KpJcqMxDyQ" name="task-pool">
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_MzoYYStXEeG_RKSDPbXcKg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_uw-kUSpqEeGj1rpFrTYsMw" iD="_uw-kUCpqEeGj1rpFrTYsMw"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oteEQCvfEeGLPIIrQpoKNA" iD="_otddMCvfEeGLPIIrQpoKNA">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qJ8pUSvfEeGLPIIrQpoKNA"/>
+    </vertices>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_MzoYYStXEeG_RKSDPbXcKg" iD="_MzoYYCtXEeG_RKSDPbXcKg" name="text" source="_ozL18QYoEeG9KpJcqMxDyQ" target="_0Pv_4QYoEeG9KpJcqMxDyQ"/>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_qJ8pUSvfEeGLPIIrQpoKNA" iD="_qJ8pUCvfEeGLPIIrQpoKNA" source="_oteEQCvfEeGLPIIrQpoKNA" target="_oVvgwSvfEeGLPIIrQpoKNA"/>
 </bpmn:BpmnDiagram>

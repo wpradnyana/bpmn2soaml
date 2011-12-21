@@ -14,10 +14,11 @@ entrypoint rule Metamodel() {
 	to
 		t: SOAML!Model (
 			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.r0(a)),
-			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r2(a))
+			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a))
 		)
 	do {	thisModule.Model <- t;	}
 }
+
 
 lazy rule r0{
 	from
@@ -31,78 +32,165 @@ lazy rule r0{
 		)
 }
 
---rule r1 (X1: BPMN!MessagingEdge){
---
---	to
---		Y1 : SOAML!Class (name <- X1.source.name),
---		Y2 : SOAML!Class (name <- X1.target.name),
---		Z1 : SOAML!Participant (baseClass <- Y1),
---		Z2 : SOAML!Participant (baseClass <- Y2),
---		Q1 : SOAML!CollaborationUse (name <- X1.name),
---		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
---		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
---		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
---		do{
---			Sequence{Y1,Y2,T1,T2};
---		}
---}
 
---rule r2 (X1: BPMN!Pool)
+
+
+lazy rule r1
+{
+	from
+	x :BPMN!Pool
+	do
+	{
+		for (c in BPMN!Pool.allInstances())
+		{
+			if (c <> x)
+			{
+				x.name.println();
+				for(i in x.vertices)
+				{
+					for (j in c.vertices)
+					{
+						thisModule.r2(x,i,c,j);
+					}
+				}
+			}
+		}
+	}
+}
+
+rule r2(X1: BPMN!pool,X2: BPMN!Vertex,X3: BPMN!Pool,X4: BPMN!Vertex)
+{
+	do
+	{
+
+		for (c in X2.outgoingMessages)
+		{
+			for (i in X4.incomingMessages)
+			{
+				if (c = i)
+				{
+					thisModule.r3(X1,X3,c);
+				}
+			}
+		}
+	}
+}
+
+rule r3(X1: BPMN!Pool,X2: BPMN!Pool, X3: BPMN!MessagingEdge)
+{
+	to
+		Y1 : SOAML!Class (name <- X1.name),
+		Y2 : SOAML!Class (name <- X2.name),
+		Z1 : SOAML!Participant (baseClass <- Y1),
+		Z2 : SOAML!Participant (baseClass <- Y2),
+		Q1 : SOAML!CollaborationUse (name <- X3.name),
+		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
+		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
+		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
+		do{
+			Sequence{Y1,Y2,T1,T2};
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--lazy rule r2
 --{
+--	from
+--	X1: BPMN!Pool
 --	to
 --	Y1: SOAML!Class (name <- X1.name),
 --	Z1: SOAML!Participant (baseClass <- Y1)
 --	do
 --	{
---		Sequence{Y1};
+--		if (X1.vertices.size() > 0)
+--		{
+--			thisModule.r3(X1,1,Y1);
+--		}
 --	}
 --}
-
-
-
-lazy rule r2
-{
-	from
-	X1: BPMN!Pool
-	to
-	Y1: SOAML!Class (name <- X1.name),
-	Z1: SOAML!Participant (baseClass <- Y1)
-	do
-	{
-		if (X1.vertices.size() > 0)
-		{
-			thisModule.r3(X1,1);
-		}
-	}
-}
-
-
-rule r3(X1: BPMN!Pool,n: Integer)
-{
-	do
-	{
-		if (n < X1.vertices.size())
-		{
-			if (X1.vertices.at(n).outgoingMessages.size() > 0)
-			{
-				'ciao'.println();
-				thisModule.r4(X1.vertices.at(n));
-			}
-			thisModule.r3(X1, n+1);
-		}
-	}
-		
-}
-
-rule r4 (X1:BPMN!Vertex)
-{
-	to
-	Y1:SOAML!Usage
-}
-
-
-
-
+--
+--
+--rule r3(X1: BPMN!Pool,n: Integer,X2: SOAML!Class)
+--{
+--	do
+--	{
+--		if (n < X1.vertices.size()+1)
+--		{
+--			if (X1.vertices.at(n).outgoingMessages.size() > 0)
+--			{
+--				thisModule.r5(X1.vertices.at(n),1,X2);
+--			}
+----			if (X1.vertices.at(n).X1.incomingMessages.size() > 0)
+----			{
+----				thisModule.r4(X1.vertices.at(n),1,X2);
+----			}
+--			thisModule.r3(X1, n+1);
+--		}
+--	}
+--		
+--}
+--
+----rule r4 (X1: BPMN!Vertex,n: Integer,X2: SOAML!Class)
+----{
+----	do
+----	{
+----		if (n < X1.incomingMessages.size()+1)
+----		{
+----			thisModule.r6(X1.outgoingMessages.at(n),X2);
+----			thisModule.r5(X1, n+1);
+----		}
+----	}
+----}
+----
+----
+----rule r7(X1: BPMN!MessagingEdge,X2: SOAML!Class)
+----{
+----	to
+----}
+--
+--
+--rule r5(X1: BPMN!Vertex,n: Integer,X2: SOAML!Class)
+--{
+--	do
+--	{
+--		if (n < X1.outgoingMessages.size()+1)
+--		{
+--			thisModule.r6(X1.outgoingMessages.at(n),X2);
+--			thisModule.r5(X1, n+1);
+--		}
+--	}
+--}
+--
+--rule r6(X1: BPMN!MessagingEdge,X2: SOAML!Class)
+--{
+--	to
+--	Q1: SOAML!CollaborationUse(name <- X1.name),
+--	T2 : SOAML!Usage (supplier <- Q1, client <- X2),
+--	R1 : SOAML!ServiceContract (collaborationUse <- Q1)
+--}
 
 
 --module BPMN2SOAML3;
