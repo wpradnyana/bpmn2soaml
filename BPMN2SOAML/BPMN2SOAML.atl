@@ -13,8 +13,8 @@ create OUT: SOAML from IN: BPMN;
 entrypoint rule Metamodel() {
 	to
 		t: SOAML!Model (
-			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.r0(a)),
-			packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a))
+			packagedElement <- BPMN!BpmnDiagram.allInstances() -> collect(a | thisModule.r0(a))
+			--packagedElement <- BPMN!Pool.allInstances() -> collect(a | thisModule.r1(a))
 		)
 	do {	thisModule.Model <- t;	}
 }
@@ -35,7 +35,7 @@ lazy rule r0{
 
 
 
-lazy rule r1
+rule r1
 {
 	from
 	x :BPMN!Pool
@@ -58,7 +58,7 @@ lazy rule r1
 	}
 }
 
-rule r2(X1: BPMN!pool,X2: BPMN!Vertex,X3: BPMN!Pool,X4: BPMN!Vertex)
+rule r2(X1: BPMN!Pool,X2: BPMN!Vertex,X3: BPMN!Pool,X4: BPMN!Vertex)
 {
 	do
 	{

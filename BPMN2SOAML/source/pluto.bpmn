@@ -4,18 +4,13 @@
     <vertices xmi:type="bpmn:Activity" xmi:id="_ozL18QYoEeG9KpJcqMxDyQ" iD="_ozL18AYoEeG9KpJcqMxDyQ" name="task-topolino">
       <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_MzoYYStXEeG_RKSDPbXcKg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_oVvgwSvfEeGLPIIrQpoKNA" iD="_oVvgwCvfEeGLPIIrQpoKNA">
-      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_qJ8pUSvfEeGLPIIrQpoKNA"/>
-    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oVvgwSvfEeGLPIIrQpoKNA" iD="_oVvgwCvfEeGLPIIrQpoKNA"/>
   </pools>
   <pools xmi:type="bpmn:Pool" xmi:id="_zZ5V8QYoEeG9KpJcqMxDyQ" iD="_zZ5V8AYoEeG9KpJcqMxDyQ" name="Pool">
     <vertices xmi:type="bpmn:Activity" xmi:id="_0Pv_4QYoEeG9KpJcqMxDyQ" iD="_0Pv_4AYoEeG9KpJcqMxDyQ" name="task-pool">
       <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_MzoYYStXEeG_RKSDPbXcKg"/>
     </vertices>
-    <vertices xmi:type="bpmn:Activity" xmi:id="_oteEQCvfEeGLPIIrQpoKNA" iD="_otddMCvfEeGLPIIrQpoKNA">
-      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_qJ8pUSvfEeGLPIIrQpoKNA"/>
-    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oteEQCvfEeGLPIIrQpoKNA" iD="_otddMCvfEeGLPIIrQpoKNA"/>
   </pools>
   <messages xmi:type="bpmn:MessagingEdge" xmi:id="_MzoYYStXEeG_RKSDPbXcKg" iD="_MzoYYCtXEeG_RKSDPbXcKg" name="text" source="_ozL18QYoEeG9KpJcqMxDyQ" target="_0Pv_4QYoEeG9KpJcqMxDyQ"/>
-  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_qJ8pUSvfEeGLPIIrQpoKNA" iD="_qJ8pUCvfEeGLPIIrQpoKNA" source="_oteEQCvfEeGLPIIrQpoKNA" target="_oVvgwSvfEeGLPIIrQpoKNA"/>
 </bpmn:BpmnDiagram>

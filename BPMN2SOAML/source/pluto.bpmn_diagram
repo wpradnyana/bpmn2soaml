@@ -80,16 +80,4 @@
     <element xmi:type="bpmn:MessagingEdge" href="pluto.bpmn#_MzoYYStXEeG_RKSDPbXcKg"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Mzo_dCtXEeG_RKSDPbXcKg" points="[6, 26, 5, -213]$[6, 206, 5, -33]"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_qJ_soCvfEeGLPIIrQpoKNA" type="3002" source="_oterUCvfEeGLPIIrQpoKNA" target="_oYAKkCvfEeGLPIIrQpoKNA">
-    <children xmi:type="notation:Node" xmi:id="_qKBh0CvfEeGLPIIrQpoKNA" type="4013">
-      <styles xmi:type="notation:FillStyle" xmi:id="_qKBh0SvfEeGLPIIrQpoKNA" fillColor="16776959"/>
-      <styles xmi:type="notation:LineStyle" xmi:id="_qKBh0ivfEeGLPIIrQpoKNA" lineColor="16776959"/>
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_qKBh0yvfEeGLPIIrQpoKNA" y="40"/>
-    </children>
-    <styles xmi:type="notation:RoutingStyle" xmi:id="_qJ_soSvfEeGLPIIrQpoKNA" routing="Rectilinear" smoothness="Normal" closestDistance="true"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_qJ_soivfEeGLPIIrQpoKNA" fontName="Arial"/>
-    <styles xmi:type="notation:LineStyle" xmi:id="_qJ_soyvfEeGLPIIrQpoKNA" lineColor="0"/>
-    <element xmi:type="bpmn:MessagingEdge" href="pluto.bpmn#_qJ8pUSvfEeGLPIIrQpoKNA"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qJ_spCvfEeGLPIIrQpoKNA" points="[-8, -28, 40, 187]$[-52, -186, -4, 29]"/>
-  </edges>
 </notation:Diagram>
