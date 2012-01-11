@@ -38,19 +38,31 @@ lazy rule r0{
 rule r1
 {
 	from
-	x :BPMN!Pool
+	X1 :BPMN!Pool
+	to
+	Y1 : SOAML!Class (name <- X1.name),
+	Z1 : SOAML!Participant (baseClass <- Y1)
+	do
+	{
+		thisModule.r2(X1,Y1);
+	}
+	
+}
+
+
+rule r2(X1: BPMN!Pool,Y1: SOAML!Class)
+{
 	do
 	{
 		for (c in BPMN!Pool.allInstances())
 		{
-			if (c <> x)
+			if (X1 <> c)
 			{
-				x.name.println();
-				for(i in x.vertices)
+				for (i in X1.vertices)
 				{
-					for (j in c.vertices)
+					if (i.outgoingMessages.size() > 0)
 					{
-						thisModule.r2(x,i,c,j);
+						thisModule.r3(X1,i,c,Y1);
 					}
 				}
 			}
@@ -58,41 +70,77 @@ rule r1
 	}
 }
 
-rule r2(X1: BPMN!Pool,X2: BPMN!Vertex,X3: BPMN!Pool,X4: BPMN!Vertex)
+
+rule r3(X1: BPMN!Pool,X2:BPMN!Vertex,X3:BPMN!Pool,Y1:SOAML!Class)
 {
 	do
 	{
-
-		for (c in X2.outgoingMessages)
+		for (c in X3.vertices)
 		{
-			for (i in X4.incomingMessages)
+			for (i in X2.outgoingMessages)
 			{
-				if (c = i)
+				for (j in c.incomingMessages)
 				{
-					thisModule.r3(X1,X3,c);
+					if (i = j)
+					{
+						thisModule.r4(i,Y1);
+					}
 				}
 			}
 		}
 	}
 }
 
-rule r3(X1: BPMN!Pool,X2: BPMN!Pool, X3: BPMN!MessagingEdge)
+rule r4(X1:BPMN!MessagingEdge,Y1:SOAML!Class)
 {
 	to
-		Y1 : SOAML!Class (name <- X1.name),
-		Y2 : SOAML!Class (name <- X2.name),
-		Z1 : SOAML!Participant (baseClass <- Y1),
-		Z2 : SOAML!Participant (baseClass <- Y2),
-		Q1 : SOAML!CollaborationUse (name <- X3.name),
-		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
-		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
-		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
-		do{
-			Sequence{Y1,Y2,T1,T2};
-		}
+	Q1 : SOAML!CollaborationUse (name <- X1.name),
+	T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
+	R1 : SOAML!ServiceContract (collaborationUse <- Q1)
 }
 
 
+
+
+
+
+
+
+--rule r2(X1: BPMN!Pool,X2: BPMN!Vertex,X3: BPMN!Pool,X4: BPMN!Vertex)
+--{
+--	do
+--	{
+--		X2.toString().println();
+--		for (c in X2.outgoingMessages)
+--		{
+--			X4.toString().println();
+--			for (i in X4.incomingMessages)
+--			{
+--				
+--				if (c = i)
+--				{
+--					thisModule.r3(X1,X3,c);
+--				}
+--			}
+--		}
+--	}
+--}
+--
+--rule r3(X1: BPMN!Pool,X2: BPMN!Pool, X3: BPMN!MessagingEdge)
+--{
+--	to
+--		Y1 : SOAML!Class (name <- X1.name),
+--		Y2 : SOAML!Class (name <- X2.name),
+--		Z1 : SOAML!Participant (baseClass <- Y1),
+--		Z2 : SOAML!Participant (baseClass <- Y2),
+--		Q1 : SOAML!CollaborationUse (name <- X3.name),
+--		T1 : SOAML!Usage (supplier <- Q1, client <- Y1),
+--		T2 : SOAML!Usage (supplier <- Q1, client <- Y2),
+--		R1 : SOAML!ServiceContract (collaborationUse <- Q1)
+--		do{
+--			Sequence{Y1,Y2,T1,T2};
+--		}
+--}
 
 
 
