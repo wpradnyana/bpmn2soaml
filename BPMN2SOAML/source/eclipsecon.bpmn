@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:BpmnDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:bpmn="http://stp.eclipse.org/bpmn" xmi:id="_oHaT0ODPEdya34o6MxSuhg" iD="_oHZswODPEdya34o6MxSuhg">
+  <pools xmi:type="bpmn:Pool" xmi:id="_oIZLQeDPEdya34o6MxSuhg" iD="_oIZLQODPEdya34o6MxSuhg" name="Attendee">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_oIaZYeDPEdya34o6MxSuhg" iD="_oIaZYODPEdya34o6MxSuhg" outgoingEdges="_nu1n4eE0Edya34o6MxSuhg" name="visit website" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_nusd8eE0Edya34o6MxSuhg" iD="_nusd8OE0Edya34o6MxSuhg" outgoingEdges="_txVV0eE0Edya34o6MxSuhg" incomingEdges="_nu1n4eE0Edya34o6MxSuhg" name="get to know &#xA;about eclipsecon" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_txMy8eE0Edya34o6MxSuhg" iD="_txMy8OE0Edya34o6MxSuhg" outgoingEdges="_6EHWEeE0Edya34o6MxSuhg" incomingEdges="_txVV0eE0Edya34o6MxSuhg" name="register" activityType="Task">
+      <outgoingMessages xmi:type="bpmn:MessagingEdge" href="#_umFzkeE0Edya34o6MxSuhg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_0RSb0OE0Edya34o6MxSuhg" iD="_0RR0wOE0Edya34o6MxSuhg" incomingEdges="_6eHxgeE0Edya34o6MxSuhg" name="book hotel" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_5XGfEeE0Edya34o6MxSuhg" iD="_5XGfEOE0Edya34o6MxSuhg" outgoingEdges="_6eHxgeE0Edya34o6MxSuhg _7EzXAeE0Edya34o6MxSuhg _HQ_nEeE1Edya34o6MxSuhg" incomingEdges="_6EHWEeE0Edya34o6MxSuhg" activityType="GatewayParallel"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_7EspUeE0Edya34o6MxSuhg" iD="_7EspUOE0Edya34o6MxSuhg" incomingEdges="_7EzXAeE0Edya34o6MxSuhg" name="blog about EclipseCon" activityType="Task"/>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_HQ2dIeE1Edya34o6MxSuhg" iD="_HQ2dIOE1Edya34o6MxSuhg" incomingEdges="_HQ_nEeE1Edya34o6MxSuhg" name="book flight" activityType="Task"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_nu1n4eE0Edya34o6MxSuhg" iD="_nu1n4OE0Edya34o6MxSuhg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_txVV0eE0Edya34o6MxSuhg" iD="_txVV0OE0Edya34o6MxSuhg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6EHWEeE0Edya34o6MxSuhg" iD="_6EHWEOE0Edya34o6MxSuhg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_6eHxgeE0Edya34o6MxSuhg" iD="_6eHxgOE0Edya34o6MxSuhg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_7EzXAeE0Edya34o6MxSuhg" iD="_7EzXAOE0Edya34o6MxSuhg"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_HQ_nEeE1Edya34o6MxSuhg" iD="_HQ_nEOE1Edya34o6MxSuhg"/>
+  </pools>
+  <pools xmi:type="bpmn:Pool" xmi:id="_i5u6IeE0Edya34o6MxSuhg" iD="_i5u6IOE0Edya34o6MxSuhg" name="Organizer">
+    <vertices xmi:type="bpmn:Activity" xmi:id="_s-Od4eE0Edya34o6MxSuhg" iD="_s-Od4OE0Edya34o6MxSuhg" outgoingEdges="_wng4weE0Edya34o6MxSuhg" name="receive registration" activityType="Task">
+      <incomingMessages xmi:type="bpmn:MessagingEdge" href="#_umFzkeE0Edya34o6MxSuhg"/>
+    </vertices>
+    <vertices xmi:type="bpmn:Activity" xmi:id="_wnXu0eE0Edya34o6MxSuhg" iD="_wnXu0OE0Edya34o6MxSuhg" incomingEdges="_wng4weE0Edya34o6MxSuhg" name="add to current attendees" activityType="Task"/>
+    <sequenceEdges xmi:type="bpmn:SequenceEdge" xmi:id="_wng4weE0Edya34o6MxSuhg" iD="_wng4wOE0Edya34o6MxSuhg"/>
+  </pools>
+  <messages xmi:type="bpmn:MessagingEdge" xmi:id="_umFzkeE0Edya34o6MxSuhg" iD="_umFzkOE0Edya34o6MxSuhg" source="_txMy8eE0Edya34o6MxSuhg" target="_s-Od4eE0Edya34o6MxSuhg"/>
+</bpmn:BpmnDiagram>

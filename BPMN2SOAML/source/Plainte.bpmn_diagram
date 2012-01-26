@@ -833,7 +833,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_aj8lFH9PEd2fMLKlL8aEWQ" fontName="Arial"/>
     <styles xmi:type="notation:LineStyle" xmi:id="_aj8lFX9PEd2fMLKlL8aEWQ" lineColor="0"/>
     <element xmi:type="bpmn:MessagingEdge" href="Plainte.bpmn#_aj8lEX9PEd2fMLKlL8aEWQ"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aj8lFn9PEd2fMLKlL8aEWQ" points="[0, 0, -763, 695]$[0, -136, -763, 559]$[763, -136, 0, 559]$[763, -695, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aj8lFn9PEd2fMLKlL8aEWQ" points="[0, 0, -762, 699]$[0, -251, -762, 448]$[762, -251, 0, 448]$[762, -699, 0, 0]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_Jhtv4oAPEd2MabsGREbgvg" type="3001" source="_ew2VQn9NEd2StNMWrsqzRQ" target="_wWyRMH9NEd2StNMWrsqzRQ">
     <children xmi:type="notation:Node" xmi:id="_Jhtv54APEd2MabsGREbgvg" type="4012">
